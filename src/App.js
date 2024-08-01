@@ -15,8 +15,8 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          King of scars
         </a>
+        <img src="https://i.pinimg.com/564x/e5/dc/f0/e5dcf0568fb397ded65581f22fd8c96d.jpg"/>
       </header>
     </div>
   );
