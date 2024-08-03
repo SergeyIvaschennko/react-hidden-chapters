@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css'; // Подключаем CSS стили
-import library_cover from "../../pics/library.jpg"
+import library_cover from "../../Pics/library.jpg"
 const Home = () => {
     return (
         <div className="home-container">
