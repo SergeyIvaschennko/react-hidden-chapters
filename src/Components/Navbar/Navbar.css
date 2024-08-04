@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+.navbar-container {
+    width: 100%;
+    background-color: transparent;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 93px;
+    max-width: 1600px; /* Ограничивает ширину контента */
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.navbar-item {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.navbar-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.heart-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.cart-icon {
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 17px;
+    width: 35px;
+    height: 35px;
+}
+
+/* Для экранов шире 1600px */
+@media (min-width: 1600px) {
+    .navbar {
+        padding: 0 24px; /* Минимальный отступ по бокам */
+    }
+
+    .navbar-container {
+        border: 2px solid white; /* Опционально: добавить границу */
+    }
+}
