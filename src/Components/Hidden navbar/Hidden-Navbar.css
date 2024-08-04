@@ -1,0 +1,16 @@
+.hidden-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: transform 8.3s ease-in-out;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-bottom: 2px solid black;
+}
+
+@media (min-width: 1600px) {
+    .navbar {
+        padding: 0 24px;
+        width: 100%;
+    }
+}
