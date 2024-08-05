@@ -32,7 +32,16 @@ const Home = () => {
                 <div className="image-container">
                     <img src={library_cover} alt="Main" className="background-image" />
                     <div className="overlay">
-                        <Navbar />
+                        <div className="navbar-container">
+                            <Navbar />
+                        </div>
+                        <div className="central-content">
+                            <h1 className="quote">A book is a sword that kills the darkness</h1>
+                            <p className="author">Victor Hugo</p>
+                            <div className="search-container">
+                                <input type="text" placeholder="Search..." />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 {showHiddenNavbar && (
