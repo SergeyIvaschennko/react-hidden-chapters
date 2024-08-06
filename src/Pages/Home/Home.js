@@ -5,6 +5,7 @@ import library_cover from "../../Pics/library.jpg";
 import HiddenNavbar from "../../Components/Hidden navbar/Hidden-Navbar";
 import '../../Components/Hidden navbar/Hidden-Navbar.css'
 import Heading from "../../Components/Heading/Heading";
+import HomeCarousel from "../../Components/Home Carousel/Home-Carousel";
 
 const Home = () => {
     const [showHiddenNavbar, setShowHiddenNavbar] = useState(false);
@@ -55,6 +56,7 @@ const Home = () => {
                 mainHeading="Absolutely brilliant"
                 subHeading="According to reader's rating"
             />
+            <HomeCarousel/>
             <Heading
                 mainHeading="Promising new books"
                 subHeading="Selection for 2024"
