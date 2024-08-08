@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Home-Carousel.css';
+import HomeItem from "../Home Item/Home-Item";
 
 const HomeCarousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,36 +30,66 @@ const HomeCarousel = () => {
         <div className="carousel-container">
             <div className="carousel-wrapper">
                 <div className="carousel" ref={carouselRef}>
-                    <div className="carousel-item">
-                        <img src="https://awoiaf.westeros.org/images/9/93/AGameOfThrones.jpg" alt="Description" />
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNyoQSzBHjKm2CZWR-Vq-m7pRUeSLhjwl3KA&s" alt="Description" />
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://m.media-amazon.com/images/I/71VK2E8l93L._AC_UF1000,1000_QL80_.jpg" alt="Description" />
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://m.media-amazon.com/images/I/91MFgXaItzL._AC_UF1000,1000_QL80_.jpg" alt="Description" />
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://awoiaf.westeros.org/images/9/93/AGameOfThrones.jpg" alt="Description" />
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNyoQSzBHjKm2CZWR-Vq-m7pRUeSLhjwl3KA&s" alt="Description" />
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://m.media-amazon.com/images/I/71VK2E8l93L._AC_UF1000,1000_QL80_.jpg" alt="Description" />
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://m.media-amazon.com/images/I/91MFgXaItzL._AC_UF1000,1000_QL80_.jpg" alt="Description" />
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://awoiaf.westeros.org/images/9/93/AGameOfThrones.jpg" alt="Description" />
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNyoQSzBHjKm2CZWR-Vq-m7pRUeSLhjwl3KA&s" alt="Description" />
-                    </div>
+                    <HomeItem
+                        imageSrc="https://awoiaf.westeros.org/images/9/93/AGameOfThrones.jpg"
+                        name="A Game of Thrones"
+                        author="George R. R. Martin"
+                        price={20}
+                    />
+                    <HomeItem
+                        imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNyoQSzBHjKm2CZWR-Vq-m7pRUeSLhjwl3KA&s"
+                        name="Animal farm"
+                        author="George Orwell"
+                        price={10}
+                    />
+                    <HomeItem
+                        imageSrc="https://m.media-amazon.com/images/I/71VK2E8l93L._AC_UF1000,1000_QL80_.jpg"
+                        name="A tale of two cities"
+                        author="Charles Dickens"
+                        price={13}
+                    />
+                    <HomeItem
+                        imageSrc="https://m.media-amazon.com/images/I/91MFgXaItzL._AC_UF1000,1000_QL80_.jpg"
+                        name="American gods"
+                        author="Neil Gaiman"
+                        price={19}
+                    />
+                    <HomeItem
+                        imageSrc="https://awoiaf.westeros.org/images/9/93/AGameOfThrones.jpg"
+                        name="A Game of Thrones"
+                        author="George R. R. Martin"
+                        price={20}
+                    />
+                    <HomeItem
+                        imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNyoQSzBHjKm2CZWR-Vq-m7pRUeSLhjwl3KA&s"
+                        name="Animal farm"
+                        author="George Orwell"
+                        price={10}
+                    />
+                    <HomeItem
+                        imageSrc="https://m.media-amazon.com/images/I/71VK2E8l93L._AC_UF1000,1000_QL80_.jpg"
+                        name="A tale of two cities"
+                        author="Charles Dickens"
+                        price={13}
+                    />
+                    <HomeItem
+                        imageSrc="https://m.media-amazon.com/images/I/91MFgXaItzL._AC_UF1000,1000_QL80_.jpg"
+                        name="American gods"
+                        author="Neil Gaiman"
+                        price={19}
+                    />
+                    <HomeItem
+                        imageSrc="https://awoiaf.westeros.org/images/9/93/AGameOfThrones.jpg"
+                        name="A Game of Thrones"
+                        author="George R. R. Martin"
+                        price={20}
+                    />
+                    <HomeItem
+                        imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNyoQSzBHjKm2CZWR-Vq-m7pRUeSLhjwl3KA&s"
+                        name="Animal farm"
+                        author="George Orwell"
+                        price={10}
+                    />
                 </div>
             </div>
             <button className="carousel-button left-button" onClick={handlePrevious}>

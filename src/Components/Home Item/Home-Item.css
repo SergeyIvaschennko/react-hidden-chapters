@@ -1,0 +1,64 @@
+.carousel-item {
+    flex: 0 0 calc((100% - 36px) / 4);
+    aspect-ratio: 341 / 523;
+    border-radius: 4px;
+    /*border: 2px solid black;*/
+}
+
+.item-pic {
+    width: 100%;
+    height: calc(100% / 1.22);
+    border-radius: 4px;
+    background-color: rgba(217, 217, 217, 0.88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-name {
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+    font-family: 'Familjen Grotesk', sans-serif;
+    font-weight: 900;
+    font-size: 23px;
+    color: #333333;
+    text-align: left;
+}
+
+.item-author {
+    margin-top: 3px;
+    font-family: 'Familjen Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    color: rgba(51, 51, 51, 0.7);
+    text-align: left;
+}
+
+.item-price {
+    margin-top: 4px;
+    font-family: 'Familjen Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    color: rgb(51, 51, 51);
+    text-align: left;
+}
+
+.item-pic img {
+    width: calc(100% / 1.86);
+    height: calc(100% / 1.51);
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        font-size: 16px;
+    }
+}

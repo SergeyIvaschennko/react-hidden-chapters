@@ -61,30 +61,37 @@ const Home = () => {
                 mainHeading="Promising new books"
                 subHeading="Selection for 2024"
             />
+            <HomeCarousel/>
             <Heading
                 mainHeading="Best sellers"
                 subHeading="Selection for 2024"
             />
+            <HomeCarousel/>
             <Heading
                 mainHeading="England's national heritage"
                 subHeading="Top 50"
             />
+            <HomeCarousel/>
             <Heading
                 mainHeading="Magic of the worlds"
                 subHeading="A selection of the best books in the fantasy genre"
             />
+            <HomeCarousel/>
             <Heading
                 mainHeading="Scientific facets"
                 subHeading="A selection of the best books in the scientific genre"
             />
+            <HomeCarousel/>
             <Heading
                 mainHeading="Dance of two hearts"
                 subHeading="A selection of the best books in the romantic genre"
             />
+            <HomeCarousel/>
             <Heading
                 mainHeading="History unites"
                 subHeading="A selection of the best books in the historical genre"
             />
+            <HomeCarousel/>
         </div>
     );
 };
