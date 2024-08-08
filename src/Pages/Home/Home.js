@@ -6,6 +6,7 @@ import HiddenNavbar from "../../Components/Hidden navbar/Hidden-Navbar";
 import '../../Components/Hidden navbar/Hidden-Navbar.css'
 import Heading from "../../Components/Heading/Heading";
 import HomeCarousel from "../../Components/Home Carousel/Home-Carousel";
+import Footer from "../../Components/Footer/Footer";
 
 const Home = () => {
     const [showHiddenNavbar, setShowHiddenNavbar] = useState(false);
@@ -92,6 +93,7 @@ const Home = () => {
                 subHeading="A selection of the best books in the historical genre"
             />
             <HomeCarousel/>
+            <Footer/>
         </div>
     );
 };
