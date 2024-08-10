@@ -72,6 +72,41 @@
 
 }
 
+.format-button {
+    width: 118px;
+    height: 58px;
+    border-radius: 4px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.format-button.selected {
+    border-color: green; /* Зеленая граница для выбранной кнопки */
+}
+
+.format-button .type {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+.format-button .price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #105741;
+    text-align: center;
+    margin-top: 2px;
+}
+
 .sub-space .tag {
     display: inline-block;
     padding: 6px 12px;
@@ -98,35 +133,6 @@
     font-size: 10px;
     font-weight: bold;
     color: #333;
-}
-
-.sub-space button {
-    width: 118px;
-    height: 58px;
-    border-radius: 4px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-}
-
-.sub-space button .type {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    text-align: center;
-}
-
-.sub-space button .price {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #105741;
-    text-align: center;
-    margin-top: 2px;
 }
 
 .bottom-buttons-container {

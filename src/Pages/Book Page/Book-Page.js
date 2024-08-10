@@ -1,8 +1,15 @@
 import './Book-Page.css'; // Подключаем CSS стили
 import Footer from "../../Components/Footer/Footer";
 import HiddenNavbar from "../../Components/Hidden navbar/Hidden-Navbar";
+import {useState} from "react";
 
 const BookPage = () => {
+    const [selectedType, setSelectedType] = useState('Written'); // По умолчанию выбрана "Written"
+
+    const handleClick = (type) => {
+        setSelectedType(type);
+    };
+
     return (
         <div>
             <HiddenNavbar/>
@@ -39,17 +46,26 @@ const BookPage = () => {
                         Choose the format
                     </div>
                     <div className="sub-space">
-                        <button>
+                        <button
+                            className={`format-button ${selectedType === 'Written' ? 'selected' : ''}`}
+                            onClick={() => handleClick('Written')}
+                        >
                             <div className="type">Written</div>
-                            <div className="price">Chosen</div>
+                            <div className="price">{selectedType === 'Written' ? 'Chosen' : '+6 €'}</div>
                         </button>
-                        <button>
+                        <button
+                            className={`format-button ${selectedType === 'Electronic' ? 'selected' : ''}`}
+                            onClick={() => handleClick('Electronic')}
+                        >
                             <div className="type">Electronic</div>
-                            <div className="price">-7 €</div>
+                            <div className="price">{selectedType === 'Electronic' ? 'Chosen' : '-7 €'}</div>
                         </button>
-                        <button>
+                        <button
+                            className={`format-button ${selectedType === 'Audio' ? 'selected' : ''}`}
+                            onClick={() => handleClick('Audio')}
+                        >
                             <div className="type">Audio</div>
-                            <div className="price">-13 €</div>
+                            <div className="price">{selectedType === 'Audio' ? 'Chosen' : '-13 €'}</div>
                         </button>
                     </div>
 
