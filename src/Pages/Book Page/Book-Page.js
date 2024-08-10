@@ -91,6 +91,44 @@ const BookPage = () => {
                     </div>
                 </div>
             </div>
+            <div className="book-page-content-container" style={{margin: '60px auto'}}>
+                <div className="container description">
+                    <div className="name" style={{color: '#333333', fontSize: '28px'}}>
+                        Description
+                    </div>
+                    <div className="description-text-container">
+                        Summers span decades. Winter can last a lifetime. And the struggle for the Iron Throne has begun. It will stretch from the south, where heat breeds plot, lusts and intrigues; to the vast frozen north, where a 700-foot wall of ice protects the kingdom from the dark forces that lie belong...
+                    </div>
+                </div>
+                <div className="container details">
+                    <div className="name" style={{color: '#333333', fontSize: '28px'}}>
+                        Details
+                    </div>
+                    <div className="details-container">
+                        <div className="space">
+                            <div className="book-detail label">Age Limit</div>
+                            <div className="book-detail value">+18</div>
+                        </div>
+                        <div className="space">
+                            <div className="book-detail label">Year of publication</div>
+                            <div className="book-detail value">2007</div>
+                        </div>
+                        <div className="space">
+                            <div className="book-detail label">Language</div>
+                            <div className="book-detail value">English</div>
+                        </div>
+                        <div className="space">
+                            <div className="book-detail label">Pages</div>
+                            <div className="book-detail value">227</div>
+                        </div>
+                        <div className="space">
+                            <div className="book-detail label">Dimensions</div>
+                            <div className="book-detail value">15 X 20 X 5 cm | 0.4 kg</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             <Footer/>
         </div>
     );

@@ -1,5 +1,5 @@
 .book-page-content-container {
-    margin: 143px auto;
+    margin: 143px auto 60px auto;
     /*border: 1px solid black;*/
     width: 981px;
     display: flex;
@@ -24,7 +24,7 @@
     position: relative;
 }
 
-.book-page-inf-container .name {
+.book-page-content-container .name {
     margin-top: 5px;
     font-family: 'Montserrat', sans-serif;
     font-size: 28px;
@@ -57,7 +57,7 @@
     border-bottom: 1px solid #d2d2d2;
 }
 
-.book-page-inf-container .space {
+.book-page-content-container .space {
     width: 100%;
     display: flex;
     /*border: 1px solid green;*/
@@ -87,7 +87,8 @@
 }
 
 .format-button.selected {
-    border-color: green; /* Зеленая граница для выбранной кнопки */
+    border-color: #105741;
+    box-shadow: 0 0 4px rgb(214, 189, 152);
 }
 
 .format-button .type {
@@ -195,6 +196,61 @@
 .buy-now-btn:hover .heart-path {
     fill: red;
 }
+
+.book-page-content-container .container{
+    /*border: 1px solid black;*/
+    height: auto;
+    padding: 0;
+}
+
+.description {
+    width: 512px;
+}
+
+.details {
+    width: 426px;
+}
+
+.description-text-container {
+    margin-top: 28px;
+    width: 100%;
+    height: auto;
+    background-color: rgba(220, 220, 220, 0.83);
+    border-radius: 4px;
+    text-align: left;
+    padding: 8px 13px;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.7;
+}
+
+.details-container {
+    margin-top: 26px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.book-detail {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.label {
+    color: rgba(51, 51, 51, 0.7);
+}
+
+.value {
+    color: rgb(16, 87, 65);
+    text-decoration: underline;
+}
+
+
+
 
 
 
