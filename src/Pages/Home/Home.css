@@ -75,7 +75,7 @@ html, body, #root {
     height: 144px;
 }
 
-.author {
+.central-content .author {
     position: absolute;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;

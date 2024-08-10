@@ -49,7 +49,6 @@ const Home = () => {
                 {showHiddenNavbar && (
                     <div className="hidden-navbar">
                         <HiddenNavbar/>
-                        выавы
                     </div>
                 )}
             </div>
