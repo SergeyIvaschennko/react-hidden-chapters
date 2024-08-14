@@ -41,4 +41,16 @@
     font-size: 29px;
     font-weight: bold;
     text-align: left;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+.category-name:focus,
+.category-name:hover,
+.category-name.active{
+    outline: none;
+    color: rgba(243, 232, 211, 0.87);
 }
