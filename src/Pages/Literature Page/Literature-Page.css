@@ -1,12 +1,10 @@
 .lit-page-content-container {
-    margin: 113px auto 25px auto;
+    margin: 125px auto 25px auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     max-width: 1600px;
     padding: 0 24px;
     box-sizing: border-box;
-    /*border: 1px solid black;*/
 }
 
 .lit-page-content-container .name {
@@ -54,3 +52,20 @@
     outline: none;
     color: rgba(243, 232, 211, 0.87);
 }
+
+.book-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 1600px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+}
+
+.book-container > * {
+    margin-bottom: 30px;
+}
+
