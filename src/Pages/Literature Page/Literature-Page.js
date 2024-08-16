@@ -1,8 +1,9 @@
 import './Literature-Page.css'; // Подключаем CSS стили
 import Footer from "../../Components/Footer/Footer";
 import HiddenNavbar from "../../Components/Hidden navbar/Hidden-Navbar";
-import React, {useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import Heading from "../../Components/Heading/Heading";
+import Dropdown from "../../Components/Dropdown/Dropdown";
 
 const LiteraturePage = () => {
 
@@ -10,8 +11,13 @@ const LiteraturePage = () => {
 
     // Функция для обработки клика по категории
     const handleCategoryClick = (category) => {
-        setActiveCategory(category); // Устанавливаем активную категорию
+        setActiveCategory(category);
     };
+
+    const categories1 = ['All categories', 'Category 1', 'Category 2', 'Category 3'];
+    const categories2 = ['All ages', 'Category B', 'Category C'];
+    const categories3 = ['All origins', 'Category Y', 'Category Z'];
+    const categories4 = ['All formats', 'Category Green', 'Category Blue'];
 
     const renderContent = () => {
         switch (activeCategory) {
@@ -47,7 +53,7 @@ const LiteraturePage = () => {
     return (
         <div>
             <HiddenNavbar/>
-            <div className="lit-page-content-container">
+            <div className="lit-page-content-container" style={{paddingLeft: '30px'}}>
                 <div className="name" style={{fontSize: '44px'}}>
                     Awesome literature
                 </div>
@@ -135,8 +141,16 @@ const LiteraturePage = () => {
                         </button>
                     </div>
                 </div>
-
             </div>
+            <div className="lit-page-content-container" style={{ marginTop: '0px' }}>
+                <div className="sub-space" style={{ gap: '20px' }}>
+                    <Dropdown key="dropdown1" categories={categories1} defaultCategory="Category" />
+                    <Dropdown key="dropdown2" categories={categories2} defaultCategory="Age" />
+                    <Dropdown key="dropdown3" categories={categories3} defaultCategory="Origin" />
+                    <Dropdown key="dropdown4" categories={categories4} defaultCategory="Format" />
+                </div>
+            </div>
+
             <div className="content-container">
                 {renderContent()}
             </div>

@@ -1,12 +1,12 @@
 .lit-page-content-container {
-    margin: 143px auto 25px auto;
+    margin: 113px auto 25px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1600px;
     padding: 0 24px;
     box-sizing: border-box;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 .lit-page-content-container .name {
