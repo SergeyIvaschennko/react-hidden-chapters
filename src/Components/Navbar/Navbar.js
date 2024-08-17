@@ -2,13 +2,14 @@ import React from 'react';
 import './Navbar.css';
 import heart from "../../Pics/heart_white.png"
 import shoppingCart from "../../Pics/shopping-bag_white.png"
+import {Link} from "react-router-dom";
 
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <div className="navbar-item left">
+            <Link to="/literature" className="navbar-item left">
                 <span className="navbar-text">Literature</span>
-            </div>
+            </Link>
             <div className="navbar-item center">
                 <svg width="277" height="50" viewBox="0 0 277 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="8" y="1" width="268" height="41" rx="4" stroke="white" stroke-width="2"/>

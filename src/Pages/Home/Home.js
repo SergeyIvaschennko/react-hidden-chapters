@@ -7,6 +7,8 @@ import '../../Components/Hidden navbar/Hidden-Navbar.css'
 import Heading from "../../Components/Heading/Heading";
 import HomeCarousel from "../../Components/Home Carousel/Home-Carousel";
 import Footer from "../../Components/Footer/Footer";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import LiteraturePage from "../Literature Page/Literature-Page";
 
 const Home = () => {
     const [showHiddenNavbar, setShowHiddenNavbar] = useState(false);
@@ -29,7 +31,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div>
+        <>
             <div className="home-container">
                 <div className="image-container">
                     <img src={library_cover} alt="Main" className="background-image" />
@@ -93,7 +95,7 @@ const Home = () => {
             />
             <HomeCarousel/>
             <Footer/>
-        </div>
+        </>
     );
 };
 

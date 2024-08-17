@@ -52,7 +52,7 @@ const LiteraturePage = () => {
     };
 
     return (
-        <div>
+        <>
             <HiddenNavbar/>
             <div className="lit-page-content-container" style={{paddingLeft: '30px'}}>
                 <div className="name" style={{fontSize: '44px'}}>
@@ -253,7 +253,7 @@ const LiteraturePage = () => {
                 {renderContent()}
             </div>
             <Footer/>
-        </div>
+        </>
     );
 };
 
