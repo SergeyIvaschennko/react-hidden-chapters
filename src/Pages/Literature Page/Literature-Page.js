@@ -1,11 +1,10 @@
 import './Literature-Page.css'; // Подключаем CSS стили
 import Footer from "../../Components/Footer/Footer";
 import HiddenNavbar from "../../Components/Hidden navbar/Hidden-Navbar";
-import React, {useEffect, useRef, useState} from "react";
-import Heading from "../../Components/Heading/Heading";
+import React, {useEffect, useState} from "react";
 import Dropdown from "../../Components/Dropdown/Dropdown";
 import HomeItem from "../../Components/Home Item/Home-Item";
-import {Link, useParams} from "react-router-dom";
+import {Link, useLocation, useNavigate, useParams} from "react-router-dom";
 
 const LiteraturePage = () => {
 
@@ -16,16 +15,25 @@ const LiteraturePage = () => {
         setActiveCategory(categoryName || 'Fiction');
     }, [categoryName]);
 
-    const categories1 = ['All categories', 'Category 1', 'Category 2', 'Category 3'];
+    const { search } = useLocation(); // Получаем query-параметры из URL
+    const navigate = useNavigate();
+
+    const queryParams = new URLSearchParams(search);
+    const initialCategory = queryParams.get('category') || 'All categories';
+    const initialAge = queryParams.get('age') || 'All ages';
+    const initialOrigin = queryParams.get('origin') || 'All origins';
+    const initialFormat = queryParams.get('format') || 'All formats';
+
+    const categories1 = ['All categories', 'Modern prose', 'Classic prose', 'Fantasy', 'Detective'];
     const categories2 = ['All ages', 'Category B', 'Category C'];
     const categories3 = ['All origins', 'Category Y', 'Category Z'];
     const categories4 = ['All formats', 'Category Green', 'Category Blue'];
 
+    const [selectedCategory, setSelectedCategory] = useState(initialCategory);
+    const [selectedAge, setSelectedAge] = useState(initialAge);
+    const [selectedOrigin, setSelectedOrigin] = useState(initialOrigin);
+    const [selectedFormat, setSelectedFormat] = useState(initialFormat);
 
-    const [selectedCategory, setSelectedCategory] = useState('All categories');
-    const [selectedAge, setSelectedAge] = useState('All ages');
-    const [selectedOrigin, setSelectedOrigin] = useState('All origins');
-    const [selectedFormat, setSelectedFormat] = useState('All formats');
 
     const [isCategoryDropdownOpen, setIsCategoryDropdownOpen] = useState(false);
     const [isAgeDropdownOpen, setIsAgeDropdownOpen] = useState(false);
@@ -43,6 +51,18 @@ const LiteraturePage = () => {
         setIsOriginDropdownOpen(false);
         setIsFormatDropdownOpen(false);
     }, [categoryName]);
+
+
+    useEffect(() => {
+        // Обновление URL с фильтрами
+        const params = new URLSearchParams();
+        if (selectedCategory !== 'All categories') params.set('category', selectedCategory);
+        if (selectedAge !== 'All ages') params.set('age', selectedAge);
+        if (selectedOrigin !== 'All origins') params.set('origin', selectedOrigin);
+        if (selectedFormat !== 'All formats') params.set('format', selectedFormat);
+
+        navigate(`/literature/${categoryName}?${params.toString()}`, { replace: true });
+    }, [selectedCategory, selectedAge, selectedOrigin, selectedFormat, categoryName]);
 
     return (
         <>
