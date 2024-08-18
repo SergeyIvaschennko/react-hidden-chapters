@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import './Dropdown.css';
 
 const Dropdown = ({ categories, defaultCategory, selectedCategory, setSelectedCategory, isOpen, setIsOpen }) => {
+    const dropdownRef = useRef(null);
+
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };
@@ -11,8 +13,26 @@ const Dropdown = ({ categories, defaultCategory, selectedCategory, setSelectedCa
         setIsOpen(false); // Закрываем меню после выбора категории
     };
 
+    const handleClickOutside = (event) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+            setIsOpen(false);
+        }
+    };
+
+    useEffect(() => {
+        if (isOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+        } else {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isOpen]);
+
     return (
-        <div className="dropdown">
+        <div className="dropdown" ref={dropdownRef}>
             <button className="dropdown-button" onClick={toggleDropdown}>
                 <div className="name-of-category">
                     {defaultCategory}
