@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Dropdown.css';
 
-const Dropdown = ({ categories, defaultCategory }) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [selectedCategory, setSelectedCategory] = useState(categories[0]); // Устанавливаем первый элемент массива как дефолтное значение
-
+const Dropdown = ({ categories, defaultCategory, selectedCategory, setSelectedCategory, isOpen, setIsOpen }) => {
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };

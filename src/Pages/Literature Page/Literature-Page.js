@@ -21,6 +21,29 @@ const LiteraturePage = () => {
     const categories3 = ['All origins', 'Category Y', 'Category Z'];
     const categories4 = ['All formats', 'Category Green', 'Category Blue'];
 
+
+    const [selectedCategory, setSelectedCategory] = useState('All categories');
+    const [selectedAge, setSelectedAge] = useState('All ages');
+    const [selectedOrigin, setSelectedOrigin] = useState('All origins');
+    const [selectedFormat, setSelectedFormat] = useState('All formats');
+
+    const [isCategoryDropdownOpen, setIsCategoryDropdownOpen] = useState(false);
+    const [isAgeDropdownOpen, setIsAgeDropdownOpen] = useState(false);
+    const [isOriginDropdownOpen, setIsOriginDropdownOpen] = useState(false);
+    const [isFormatDropdownOpen, setIsFormatDropdownOpen] = useState(false);
+
+    useEffect(() => {
+        // Сброс фильтров при изменении категории
+        setSelectedCategory('All categories');
+        setSelectedAge('All ages');
+        setSelectedOrigin('All origins');
+        setSelectedFormat('All formats');
+        setIsCategoryDropdownOpen(false);
+        setIsAgeDropdownOpen(false);
+        setIsOriginDropdownOpen(false);
+        setIsFormatDropdownOpen(false);
+    }, [categoryName]);
+
     return (
         <>
             <HiddenNavbar/>
@@ -115,10 +138,38 @@ const LiteraturePage = () => {
             </div>
             <div className="lit-page-content-container" style={{ marginTop: '0px'}}>
                 <div className="sub-space" style={{ gap: '15px' }}>
-                    <Dropdown key="dropdown1" categories={categories1} defaultCategory="Category" />
-                    <Dropdown key="dropdown2" categories={categories2} defaultCategory="Age" />
-                    <Dropdown key="dropdown3" categories={categories3} defaultCategory="Origin" />
-                    <Dropdown key="dropdown4" categories={categories4} defaultCategory="Format" />
+                    <Dropdown
+                        categories={categories1}
+                        defaultCategory="Category"
+                        selectedCategory={selectedCategory}
+                        setSelectedCategory={setSelectedCategory}
+                        isOpen={isCategoryDropdownOpen}
+                        setIsOpen={setIsCategoryDropdownOpen}
+                    />
+                    <Dropdown
+                        categories={categories2}
+                        defaultCategory="Age"
+                        selectedCategory={selectedAge}
+                        setSelectedCategory={setSelectedAge}
+                        isOpen={isAgeDropdownOpen}
+                        setIsOpen={setIsAgeDropdownOpen}
+                    />
+                    <Dropdown
+                        categories={categories3}
+                        defaultCategory="Origin"
+                        selectedCategory={selectedOrigin}
+                        setSelectedCategory={setSelectedOrigin}
+                        isOpen={isOriginDropdownOpen}
+                        setIsOpen={setIsOriginDropdownOpen}
+                    />
+                    <Dropdown
+                        categories={categories4}
+                        defaultCategory="Format"
+                        selectedCategory={selectedFormat}
+                        setSelectedCategory={setSelectedFormat}
+                        isOpen={isFormatDropdownOpen}
+                        setIsOpen={setIsFormatDropdownOpen}
+                    />
                 </div>
             </div>
             <div className="book-container">
