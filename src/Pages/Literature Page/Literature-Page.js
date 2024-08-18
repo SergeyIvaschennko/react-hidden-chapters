@@ -6,6 +6,21 @@ import Dropdown from "../../Components/Dropdown/Dropdown";
 import HomeItem from "../../Components/Home Item/Home-Item";
 import {Link, useLocation, useNavigate, useParams} from "react-router-dom";
 
+const subcategoriesMap = {
+    Fiction: ['All categories', 'Modern prose', 'Classic prose', 'Fantasy', 'Detective', 'Thriller', 'Romance novels', 'Historical novels', 'Adventure', 'Biography. Memoirs', 'Poetry', 'Folklore', 'Humor. Satire'],
+    Comics: ['All categories', 'Superheroes', 'Manga', 'Graphic Novels', 'Webcomics'],
+    Languages: ['All categories', 'English', 'French', 'Spanish', 'German', 'Russian'],
+    Psychology: ['All categories', 'Self-help', 'Clinical', 'Developmental', 'Cognitive'],
+    ForKids: ['All categories', 'Picture Books', 'Early Readers', 'Middle Grade', 'Young Adult'],
+    Education: ['All categories', 'Textbooks', 'Guides', 'Reference', 'Workbooks'],
+    Medicine: ['All categories', 'Anatomy', 'Pharmacology', 'Nursing', 'Surgery'],
+    Religion: ['All categories', 'Christianity', 'Islam', 'Buddhism', 'Judaism'],
+    Hobby: ['All categories', 'Crafts', 'Gardening', 'Cooking', 'DIY'],
+    Art: ['All categories', 'Painting', 'Sculpture', 'Photography', 'Architecture'],
+    History: ['All categories', 'Ancient', 'Medieval', 'Modern', 'Military'],
+    Science: ['All categories', 'Physics', 'Chemistry', 'Biology', 'Astronomy']
+};
+
 const LiteraturePage = () => {
 
     const { categoryName } = useParams(); // Получаем категорию из URL
@@ -24,10 +39,9 @@ const LiteraturePage = () => {
     const initialOrigin = queryParams.get('origin') || 'All origins';
     const initialFormat = queryParams.get('format') || 'All formats';
 
-    const categories1 = ['All categories', 'Modern prose', 'Classic prose', 'Fantasy', 'Detective'];
-    const categories2 = ['All ages', 'Category B', 'Category C'];
-    const categories3 = ['All origins', 'Category Y', 'Category Z'];
-    const categories4 = ['All formats', 'Category Green', 'Category Blue'];
+    const categories2 = ['All ages', '+0', '+6', '+12', '+18'];
+    const categories3 = ['All origins', 'Europe', 'North America', 'Asia', 'Africa', 'Latin America'];
+    const categories4 = ['All formats', 'Printed', 'Electronic', 'Audio'];
 
     const [selectedCategory, setSelectedCategory] = useState(initialCategory);
     const [selectedAge, setSelectedAge] = useState(initialAge);
@@ -53,16 +67,25 @@ const LiteraturePage = () => {
     }, [categoryName]);
 
 
+    const [subcategories, setSubcategories] = useState(subcategoriesMap['Fiction']);  // Начальное значение - подкатегории для Fiction
+    const [selectedSubcategory, setSelectedSubcategory] = useState('All categories');
+
+    // Обновляем подкатегории при изменении основной категории
     useEffect(() => {
-        // Обновление URL с фильтрами
+        setSubcategories(subcategoriesMap[activeCategory] || []);
+        setSelectedSubcategory('All categories'); // Сбрасываем выбранную подкатегорию при смене основной категории
+    }, [activeCategory]);
+
+    useEffect(() => {
+        // Обновление URL с фильтрами, включая подкатегорию
         const params = new URLSearchParams();
-        if (selectedCategory !== 'All categories') params.set('category', selectedCategory);
+        if (selectedSubcategory !== 'All categories') params.set('subcategory', selectedSubcategory);
         if (selectedAge !== 'All ages') params.set('age', selectedAge);
         if (selectedOrigin !== 'All origins') params.set('origin', selectedOrigin);
         if (selectedFormat !== 'All formats') params.set('format', selectedFormat);
 
         navigate(`/literature/${categoryName}?${params.toString()}`, { replace: true });
-    }, [selectedCategory, selectedAge, selectedOrigin, selectedFormat, categoryName]);
+    }, [selectedCategory, selectedAge, selectedOrigin, selectedFormat, selectedSubcategory, categoryName]);
 
     return (
         <>
@@ -102,7 +125,7 @@ const LiteraturePage = () => {
                             Psychology (2)
                         </Link>
                         <Link
-                            to="/literature/For-kids"
+                            to="/literature/ForKids"
                             className={`category-name ${activeCategory === 'For-kids' ? 'active' : ''}`}
                         >
                             For kids (55)
@@ -159,10 +182,10 @@ const LiteraturePage = () => {
             <div className="lit-page-content-container" style={{ marginTop: '0px'}}>
                 <div className="sub-space" style={{ gap: '15px' }}>
                     <Dropdown
-                        categories={categories1}
+                        categories={subcategories}
                         defaultCategory="Category"
-                        selectedCategory={selectedCategory}
-                        setSelectedCategory={setSelectedCategory}
+                        selectedCategory={selectedSubcategory}
+                        setSelectedCategory={setSelectedSubcategory}
                         isOpen={isCategoryDropdownOpen}
                         setIsOpen={setIsCategoryDropdownOpen}
                     />
