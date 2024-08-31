@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Home.css'; // Подключаем CSS стили
+import './Home.css';
 import Navbar from "../../Components/Navbar/Navbar";
 import library_cover from "../../Pics/library.jpg";
 import HiddenNavbar from "../../Components/Hidden navbar/Hidden-Navbar";
@@ -7,8 +7,7 @@ import '../../Components/Hidden navbar/Hidden-Navbar.css'
 import Heading from "../../Components/Heading/Heading";
 import HomeCarousel from "../../Components/Home Carousel/Home-Carousel";
 import Footer from "../../Components/Footer/Footer";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import LiteraturePage from "../Literature Page/Literature-Page";
+
 
 const Home = () => {
     const [showHiddenNavbar, setShowHiddenNavbar] = useState(false);
