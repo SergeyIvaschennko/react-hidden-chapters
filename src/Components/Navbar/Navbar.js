@@ -23,7 +23,9 @@ const Navbar = () => {
             </div>
             <div className="navbar-item right">
                 <img src={heart} alt="Heart Icon" className="heart-icon" />
-                <img src={shoppingCart} alt="Shopping Cart Icon" className="cart-icon" />
+                <Link to="/shopping-cart">
+                    <img src={shoppingCart} alt="Shopping Cart Icon" className="cart-icon" />
+                </Link>
                 <div className="navbar-circle"></div>
             </div>
         </nav>

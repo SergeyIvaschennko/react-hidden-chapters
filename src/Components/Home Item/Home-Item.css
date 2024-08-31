@@ -2,7 +2,6 @@
     flex: 0 0 calc((100% - 36px) / 4);
     aspect-ratio: 341 / 523;
     border-radius: 4px;
-    /*border: 2px solid black;*/
 }
 
 .item-pic {

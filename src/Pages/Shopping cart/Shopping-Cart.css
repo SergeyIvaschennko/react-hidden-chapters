@@ -1,0 +1,33 @@
+.shpc-page-content-container {
+    margin: 125px auto 25px auto;
+    display: flex;
+    max-width: 1600px;
+    padding: 0 178px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.shpc-page-content-container .name{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+.main-cart {
+    flex-grow: 1;
+    height: 500px;
+    background-color: transparent;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+
+.check {
+    width: 360px;
+    height: 200px;
+    background-color: #DFDFDF;
+    border-radius: 6px;
+    position: sticky;
+}

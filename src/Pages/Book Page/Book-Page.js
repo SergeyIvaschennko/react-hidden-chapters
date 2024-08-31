@@ -2,7 +2,6 @@ import './Book-Page.css'; // Подключаем CSS стили
 import Footer from "../../Components/Footer/Footer";
 import HiddenNavbar from "../../Components/Hidden navbar/Hidden-Navbar";
 import {useState} from "react";
-import HomeCarousel from "../../Components/Home Carousel/Home-Carousel";
 import BookPageCarousel from "../../Components/Book Page Carousel/Book-Page-Carousel";
 
 const BookPage = () => {
