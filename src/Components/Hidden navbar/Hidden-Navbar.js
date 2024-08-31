@@ -10,9 +10,9 @@ const HiddenNavbar = () => {
             <nav className="navbar" style={{
                 backgroundColor: 'white'
             }}>
-                <div className="navbar-item left">
+                <Link to="/literature/Fiction" className="navbar-item left">
                     <span className="navbar-text" style={{ color: 'black' }}>Literature</span>
-                </div>
+                </Link>
                 <Link to="/" className="navbar-item center">
                     <svg width="277" height="50" viewBox="0 0 277 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect y="7" width="270" height="43" rx="5" fill="#105741"/>

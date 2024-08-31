@@ -44,6 +44,11 @@
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 5px;
+    transition: text-decoration 0.3s ease;
+}
+
+.navbar-text:hover {
+    text-decoration: underline;
 }
 
 .navbar-circle {
