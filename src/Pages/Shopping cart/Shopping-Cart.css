@@ -18,10 +18,19 @@
 
 .main-cart {
     flex-grow: 1;
-    height: 500px;
+    height: auto;
     background-color: transparent;
     border-radius: 6px;
     border: 1px solid black;
+    padding: 21px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-cart .cart-item:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 45px;
+    padding-bottom: 20px;
 }
 
 .check {
@@ -65,7 +74,7 @@
 }
 
 .check-main .line {
-    margin-top: 18px;
+    margin-top: 13px;
     width: 100%;
     border-bottom: 1px solid #c7c7c7;
 }

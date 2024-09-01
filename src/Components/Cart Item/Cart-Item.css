@@ -1,0 +1,153 @@
+.cart-item-container {
+    height: 127px;
+    width: 100%;
+    /*border: 1px solid green;*/
+    position: relative;
+}
+
+.border-bottom {
+    margin-top: 21px;
+    margin-bottom: 21px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-item-pic {
+    height: 127px;
+    width: 83px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.cart-item-pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.cart-item-container .text {
+    font-family: 'Familjen Grotesk', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: absolute;
+}
+
+
+.head-container { /*контейнер, чтобы расположить название и автора по горизонтали*/
+    font-family: 'Familjen Grotesk', sans-serif;
+    position: absolute;
+    left: 109px;
+    top: 0;
+}
+
+.head-name { /*контейнер, чтобы расположить название и формат по горизонтали*/
+    display: flex;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    gap: 5px;
+    align-items: flex-end;
+}
+
+.head-author {
+    color: rgba(51, 51, 51, 0.7);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.head-name .book-name {
+    color: black;
+    font-size: 19px;
+}
+
+.head-name .format {
+    color: rgba(138, 138, 138, 0.7);
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.delete-button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.delete-button::before,
+.delete-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22px;
+    height: 1px;
+    background-color: black;
+    transform-origin: center;
+}
+
+.delete-button::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.delete-button::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.counter-container {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 56px;
+    height: 20px;
+    background-color: #D9D9D9;
+    border-radius: 3px;
+    font-family: Arial, sans-serif;
+}
+
+.counter-button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #5F5F5F;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter-value {
+    font-size: 12px;
+    color: #5F5F5F;
+    /*width: 20px;*/
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.counter-button.minus::before,
+.counter-button.plus::before {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 1px;
+    background-color: #555555; /* Цвет палочки */
+}
+
+.counter-button.plus::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 9px;
+    background-color: #555555; /* Цвет вертикальной линии в крестике */
+}
+
+
+

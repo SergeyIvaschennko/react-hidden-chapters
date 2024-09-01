@@ -6,6 +6,7 @@ import visa from "../../Pics/visa.png"
 import mastercard from "../../Pics/card.png"
 import applepay from "../../Pics/apple-pay (1).png"
 import paypal from "../../Pics/paypal-logo.png"
+import CartItem from "../../Components/Cart Item/Cart-Item";
 
 
 const ShoppingCart = () => {
@@ -32,7 +33,11 @@ const ShoppingCart = () => {
                 </div>
             </div>
             <div className="shpc-page-content-container" style={{marginTop: '0px'}}>
-                <div className="main-cart"></div>
+                <div className="main-cart">
+                    <CartItem isLast={false} />
+                    <CartItem isLast={false} />
+                    <CartItem isLast={true} />
+                </div>
                 <div className="check" ref={checkRef}>
                     <div className="check-main">
                         <div className="space">
