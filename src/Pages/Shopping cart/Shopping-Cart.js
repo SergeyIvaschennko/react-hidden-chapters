@@ -34,9 +34,9 @@ const ShoppingCart = () => {
             </div>
             <div className="shpc-page-content-container" style={{marginTop: '0px'}}>
                 <div className="main-cart">
-                    <CartItem isLast={false} />
-                    <CartItem isLast={false} />
-                    <CartItem isLast={true} />
+                    <CartItem isLast={false} name = "A Game of thrones" author = "George M. M. Martin" format = "written" price = "20" img = "https://www.georgerrmartin.com/wp-content/uploads/2013/03/GOTMTI2.jpg"/>
+                    <CartItem isLast={false} name = "The Da Vinci Code" author = "Dan Brown" format = "electronic" price = "24" img = "https://m.media-amazon.com/images/I/815WORuYMML._AC_UF1000,1000_QL80_.jpg"/>
+                    <CartItem isLast={true} name = "A Clockwork Orange" author = "Anthony Burgess" format = "written" price = "13" img = "https://m.media-amazon.com/images/I/61ZDp7+VKgL._AC_UF1000,1000_QL80_.jpg"/>
                 </div>
                 <div className="check" ref={checkRef}>
                     <div className="check-main">

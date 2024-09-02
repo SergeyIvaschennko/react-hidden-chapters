@@ -1,14 +1,14 @@
 import "./Cart-Item.css"
 import {useState} from "react";
 
-const CartItem = ({ isLast }) => {
+const CartItem = ({ isLast, name, author, format, price, img }) => {
 
-    const unitPrice = 20;
+    const unitPrice = price;
 
     const [count, setCount] = useState(1);
 
     const handleDecrement = () => {
-        if (count > 1) { // Можно изменить на 0 или другое минимальное значение
+        if (count > 1) {
             setCount(count - 1);
         }
     };
@@ -23,18 +23,18 @@ const CartItem = ({ isLast }) => {
         <>
             <div className="cart-item-container">
             <div className="cart-item-pic">
-                    <img src = "https://awoiaf.westeros.org/images/9/93/AGameOfThrones.jpg"/>
+                    <img src = {img}/>
                     <div className="head-container">
                         <div className="head-name">
                             <div className="book-name">
-                                A game of thrones
+                                {name}
                             </div>
                             <div className="format">
-                                format: written
+                                format: {format}
                             </div>
                         </div>
                         <div className="head-author">
-                            George M. M. Martin
+                            {author}
                         </div>
                     </div>
                     <div className="text" style={{left: '109px', fontSize: '28px', bottom: '2px', color: '#333333'}}>
