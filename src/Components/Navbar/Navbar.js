@@ -7,9 +7,14 @@ import {Link} from "react-router-dom";
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <Link to="/literature/Fiction" className="navbar-item left">
-                <span className="navbar-text">Literature</span>
-            </Link>
+            <div className="navbar-item">
+                <Link to="/literature/Fiction" style={{ textDecoration: 'none' }}>
+                    <div className="navbar-text">Literature</div>
+                </Link>
+                <Link to="/add-book" style={{ textDecoration: 'none' }}>
+                    <div className="navbar-text" style={{ color: 'white', marginLeft: '15px'}}>Add</div>
+                </Link>
+            </div>
             <div className="navbar-item center">
                 <svg width="277" height="50" viewBox="0 0 277 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="8" y="1" width="268" height="41" rx="4" stroke="white" stroke-width="2"/>

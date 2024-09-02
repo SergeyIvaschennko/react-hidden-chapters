@@ -5,6 +5,7 @@ import LiteraturePage from "./Pages/Literature Page/Literature-Page";
 import {Route, Routes} from "react-router-dom";
 import ScrollToTop from "./Components/Scroll Top/ScrollToTop";
 import ShoppingCart from "./Pages/Shopping cart/Shopping-Cart";
+import AddForm from "./Pages/Add Form/Add-Form";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
               <Route path="/literature/:categoryName" element={<LiteraturePage />} />
               <Route path="/book" element={<BookPage />} />
               <Route path="/shopping-cart" element={<ShoppingCart />} />
+              <Route path="/add-book" element={<AddForm />} />
           </Routes>
       </>
   );
